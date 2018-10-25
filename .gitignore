@@ -4,7 +4,7 @@
 /.settings/**
 /.DS_Store
 /out/
-/.idea/
+**/.idea/
 *.iml
 **/rest/**
 *.DS_Store
