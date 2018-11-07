@@ -1,6 +1,6 @@
-package subject;
+package design.practice.weather.data.displayer.subject;
 
-import observer.IObserver;
+import design.practice.weather.data.displayer.observer.IObserver;
 
 /**
  * @author yanzy
@@ -31,5 +31,5 @@ public interface ISubject {
      * @param humidity
      * @param pressure
      */
-    void setMeasurements(float temperature, float humidity, float pressure);
+    //void setMeasurements(float temperature, float humidity, float pressure);
 }

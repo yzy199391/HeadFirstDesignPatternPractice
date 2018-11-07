@@ -1,7 +1,7 @@
-package observer;
+package design.practice.weather.data.displayer.observer;
 
 
-import subject.ISubject;
+import design.practice.weather.data.displayer.subject.ISubject;
 
 /**
  * @author yanzy
@@ -19,8 +19,8 @@ public class CurrentConditionDisplay implements IObserver, IDisplayElement {
 
     @Override
     public void display() {
-        if(this.temperature == null && this.humidity == null){
-            System.out.println("no message from subject!\n");
+        if (this.temperature == null && this.humidity == null) {
+            System.out.println("no message from design.practice.weather.data.displayer.subject!\n");
         }
         System.out.println("current conditions: -" + this.temperature + "F- degrees and -" + this.humidity + "%- humidity");
     }
@@ -33,12 +33,12 @@ public class CurrentConditionDisplay implements IObserver, IDisplayElement {
         this.display();
     }
 
-    public void subscribe(){
+    public void subscribe() {
         this.subject.registerObserver(this);
         System.out.println("success to subscribe " + subject);
     }
 
-    public void unsubscribe(){
+    public void unsubscribe() {
         this.subject.removeObserver(this);
         System.out.println("success to unsubscribe " + subject);
     }

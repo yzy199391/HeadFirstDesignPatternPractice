@@ -1,6 +1,6 @@
-package subject;
+package design.practice.weather.data.displayer.subject;
 
-import observer.IObserver;
+import design.practice.weather.data.displayer.observer.IObserver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ public class WeatherData implements ISubject {
 
     @Override
     public void removeObserver(IObserver observer) {
-        if(observers.indexOf(observer) >= 0){
+        if (observers.indexOf(observer) >= 0) {
             this.observers.remove(observer);
         }
     }
@@ -39,34 +39,11 @@ public class WeatherData implements ISubject {
         });
     }
 
-    @Override
-    public void setMeasurements(float temperature, float humidity, float pressure){
+    //@Override
+    public void setMeasurements(float temperature, float humidity, float pressure) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
-    }
-
-    public float getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(float temperature) {
-        this.temperature = temperature;
-    }
-
-    public float getHumidity() {
-        return humidity;
-    }
-
-    public void setHumidity(float humidity) {
-        this.humidity = humidity;
-    }
-
-    public float getPressure() {
-        return pressure;
-    }
-
-    public void setPressure(float pressure) {
-        this.pressure = pressure;
+        notifyObservers();
     }
 }

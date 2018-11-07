@@ -1,4 +1,4 @@
-package observer;
+package design.practice.weather.data.displayer.observer;
 
 /**
  * @author yanzy
